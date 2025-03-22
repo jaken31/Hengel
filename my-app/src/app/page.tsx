@@ -1,13 +1,13 @@
-// filepath: /Users/jake/Documents/GitHub/ctc-25/my-app/src/app/page.tsx
-import React from 'react';
+"use client";
 
-const Page = () => {
+import { useState } from 'react';
+
+export default function Page() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
-      <h1>Hello, World!</h1>
-      <p>This is the popup content.</p>
+    <div className="p-4">
+      <h1>This is a cybersecurity extension</h1>
     </div>
   );
-};
-
-export default Page;
+}

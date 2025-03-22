@@ -1,8 +1,12 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/.' : '',
   output: 'export',
-  trailingSlash: true,
-};
+  // Disable image optimization since it's not compatible with static exports
+  images: {
+    unoptimized: true,
+  },
+  // This setting makes sure static files get placed appropriately
+  distDir: 'out'
+}
 
-export default nextConfig;
+module.exports = nextConfig
