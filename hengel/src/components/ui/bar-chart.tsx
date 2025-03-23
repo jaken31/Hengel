@@ -37,8 +37,8 @@ export function BarGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Bar Chart - Web Vunerability Activities</CardTitle>
+        <CardDescription>Frequency</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

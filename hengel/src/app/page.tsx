@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 import { BarGraph } from "@/components/ui/bar-chart";
 import { LineGraph } from "@/components/ui/line-chart";
 import { Card } from "@/components/ui/card";
-import { Bar } from "recharts";
+import { Button } from "@/components/ui/button";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 
 import { useState } from "react";
 export default function Home() {
@@ -30,26 +31,34 @@ export default function Home() {
   return (
     <div className="w-full h-screen flex ">
       <div className="flex w-full">
-        <div className="flex flex-col h-full p-20 pr-6 w-3/5 ">
+        <div className="flex flex-col h-full p-20 pr-6 w-3/5 overflow-hidden relative">
           <div>
             <h1 className="text-8xl font-bold z-1">HENGEL</h1>
-            <h2 className="text-2xl font-bold flex my-5 mt-2 opacity-50 z-1">
+            <h2 className="text-xl font-light flex my-5 mt-2 opacity-50 z-1">
               for your safety
             </h2>
           </div>
-          <BackgroundGradient className="">
-            <CardSpotlight className="h-full z-2 p-12 mr-8 w-full flex flex-col">
+          <BackgroundGradient className=" overflow-hidden relative">
+            <CardSpotlight className="h-full z-2 p-12 mr-8 w-full flex flex-col overflow-hidden relative">
               <div className="z-2 m-2 mb-6 font-bold text-2xl">
                 Here are your activities:
               </div>
               <div className="z-2 my-4 h-full min-w-full flex items-center justify-center">
-                <div className="w-full h-full">
-                  <Card>
-                    <div className="m-4">Analysis</div>
+                <div className="w-full h-full flex-grow overflow-hidden">
+                  <Card className="flex flex-col h-full">
+                    <div className="flex flex-col h-full">
+                      <div className="m-4">
+                        <h3 className="text-lg ml-4 font-semibold mb-4">Database Analysis</h3>
+                        
+                      </div>
+                      <div className="h-full items-end flex justify-end m-3">
+                        <Button className="h-10">Start Background Scan</Button>
+                      </div>
+                    </div>
                   </Card>
                 </div>
               </div>
-              <div className="z-2 transform -rotate-1.8 flex items-end h-full">
+              <div className="z-2 transform -rotate-1.8 flex h-full relative">
                 <div className="w-1/2 h-fit">
                   <BarGraph />
                 </div>
@@ -61,8 +70,9 @@ export default function Home() {
           </BackgroundGradient>
         </div>
         <div className="flex items-center p-20 pl-6 w-2/5 h-full">
-          <BackgroundGradient className="w-full h-full">
-            <CardSpotlight className="h-full z-2 p-12 w-full flex flex-col justify-between">
+          <BackgroundGradient className="w-full h-full overflow-hidden">
+            <CardSpotlight className="h-full z-2 p-12 w-full flex flex-col justify-between relative overflow-hidden">
+              <div className="text-2xl font-bold z-3 m-4">AI Assistance</div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
