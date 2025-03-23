@@ -1,4 +1,5 @@
 "use client";
+import { invoke } from '@tauri-apps/api/core';
 import Image from "next/image";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
@@ -27,7 +28,7 @@ export default function Home() {
     e.preventDefault();
     console.log("submitted");
   };
-
+window.__TAURI__.core.invoke('start_read')
   return (
     <div className="w-full h-screen flex ">
       <div className="flex w-full">
