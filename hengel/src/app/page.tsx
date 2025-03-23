@@ -51,7 +51,7 @@ export default function Home() {
                         <h3 className="text-lg ml-4 font-semibold mb-4">Database Analysis</h3>
                         
                       </div>
-                      <div className="h-full items-end flex justify-end m-3">
+                      <div className="h-full items-end flex justify-end mr-10">
                         <Button className="h-10">Start Background Scan</Button>
                       </div>
                     </div>

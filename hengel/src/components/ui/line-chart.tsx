@@ -65,7 +65,7 @@ export function LineGraph() {
             <Line
               dataKey="desktop"
               type="natural"
-              stroke="#000000"
+              stroke="#5a189a"
               strokeWidth={2}
               dot={false}
             />
